@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 10px;
+    color: black;
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .navigation-links a,
+  .social-links a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .contact-info li {
+    font-size: 0.9rem;
+  }
+  

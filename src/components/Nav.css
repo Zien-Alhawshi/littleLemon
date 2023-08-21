@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #f0f0f0; /* Example background color */
+  }
+  
+  .main-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adjust gap between links */
+  }
+  
+  .main-links li a {
+    text-decoration: none;
+    color: black; /* Example link color */
+  }
+  
+  .logo img {
+    max-height: 50px; /* Example logo height */
+  }
+  
