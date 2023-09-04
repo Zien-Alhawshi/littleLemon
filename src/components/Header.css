@@ -1,0 +1,74 @@
+.header {
+  background-color: #495e57;
+  display: flex;
+  justify-content: space-around; /* Add space between columns */
+  
+  font-family: Markazi Text, serif;
+  height: 420px;
+  margin-top: 1em;
+  width: 100%;
+  margin-bottom: 4em;
+  /* padding: 0 2em; Add padding to create reasonable margins on both sides */
+}
+
+.left-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-column h1 {
+  color: #f4ce14;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.left-column h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 1em;
+}
+
+.left-column p {
+  color: #fff;
+  font-family: Karla, sans-serif;
+  font-size: 22px;
+  width: 350px;
+}
+
+.left-column button {
+  background-color: #f4ce14;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  color: #000;
+  font-family: Karla, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  height: 3em;
+  margin: 1em auto; /* Center the button horizontally */
+  width: 12em;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right-column img {
+  border-radius: 15px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+  border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,.2);
+    height: 500px;
+    margin-left: 6em;
+    margin-top: 2em;
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+  .right-column {
+    display: none; /* Hide the right column */
+  }
+}

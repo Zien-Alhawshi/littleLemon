@@ -1,0 +1,68 @@
+.flex-container {
+    display: flex;
+    padding:2em 0 6em 0;
+}
+
+/* Style for the first flex item */
+.flex-item-1 {
+    flex: 1; /* Take up available space */
+    padding: 20px;
+    margin: 1em 2em;
+}
+
+/* Style for the header */
+.flex-item-1 h1 {
+
+    margin-bottom: 10px;
+    color: #000;
+    font-family: "Markazi Text",serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+.flex-item-1 h5{
+    font-size: 30px;
+    margin-top: 1em;
+    
+    color: #000;
+    font-family: Markazi Text,serif;
+}
+
+
+
+
+/* Style for the paragraph */
+.flex-item-1 p {
+    font-size: 16px;
+    color: #000;
+    font-family: Karla,sans-serif;
+    line-height: 1.7em;
+    margin-top: 1em;
+}
+
+
+/* Style for the second flex item */
+.flex-item-2 {
+    flex: 1; /* Take up available space */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Style for the images */
+.image {
+    width:300px;
+    height:80%;
+    
+    position: absolute;
+}
+
+/* Position the second image on top of the first image */
+.image:nth-child(2) {
+    left: 12em;
+    top: 8em;
+}
+@media (max-width: 768px) {
+    .flex-item-2 {
+      display: none; /* Hide the right column */
+    }
+  }
