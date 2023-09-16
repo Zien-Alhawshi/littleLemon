@@ -9,10 +9,10 @@ const Test = ()=>{
       <div>
        <h1 className="test-title">Testimonials</h1>
        </div>
-    <section class="testimonials">
+    <section className="testimonials">
       
-        <div class="testimonial-card">
-            <div class="rating">
+        <div className="testimonial-card">
+            <div className="rating">
                 ★★★★★
             </div>
             <img src={img1}alt="Testimonial 1" />
@@ -20,8 +20,8 @@ const Test = ()=>{
             <p>"Really enjoyed the atmosphere."</p>
         </div>
 
-        <div class="testimonial-card">
-            <div class="rating">
+        <div className="testimonial-card">
+            <div className="rating">
                 ★★★★★
             </div>
             <img src={img2} alt="Testimonial 2" />
@@ -29,16 +29,16 @@ const Test = ()=>{
             <p>"The greek salad was excellent!"</p>
         </div>
 
-        <div class="testimonial-card">
-            <div class="rating">
+        <div className="testimonial-card">
+            <div className="rating">
                 ★★★★★
             </div>
             <img src={img3} alt="Testimonial 3" />
             <h3>Peter R.</h3>
             <p>"You have to try the Greek Salad!"</p>
         </div>
-        <div class="testimonial-card">
-            <div class="rating">
+        <div className="testimonial-card">
+            <div className="rating">
                 ★★★★★
             </div>
             <img src={img4} alt="Testimonial 3" />

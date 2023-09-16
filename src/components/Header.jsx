@@ -4,7 +4,7 @@ import img from "../assets/image.jpg"
 const Header = ()=>{
     return(
         <>
-         <Nav />
+         
          <div className="header">
   <div className="left-column">
     <h1>Little Lemon</h1>
