@@ -24,6 +24,8 @@ const BookingForm = () => {
   const [selectedOccasion, setSelectedOccasion] = useState("Birthday");
   const [bookedTimes, setBookedTimes] = useState([]);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+
 
 
   // Function to filter booked times for the selected date
@@ -109,6 +111,7 @@ const BookingForm = () => {
         // Handle any errors that occur during submission
       }
     }
+
   };
 
   // Get available times based on the selected date and filtered booked times
@@ -118,25 +121,61 @@ const BookingForm = () => {
   const [availableTimes, setAvailableTimes] = useState(
     initialAvailableTimes.filter((time) => !availableTimesForSelectedDate.includes(time))
   );
+  const validateForm = () => {
+    // Add your validation logic here
+    const isDateValid = selectedDate !== "";
+    const isTimeValid = selectedTime !== "";
+    const isGuestsValid = numberOfGuests >= 1 && numberOfGuests <= 10;
+    const isOccasionValid = selectedOccasion !== "";
+  
+    // Update the form validity state
+    setIsFormValid(isDateValid && isTimeValid && isGuestsValid && isOccasionValid);
+  };
+  const handleDateChange = (e) => {
+    setSelectedDate(e.target.value);
+    validateForm();
+  };
+  
+  const handleTimeChange = (e) => {
+    setSelectedTime(e.target.value);
+    validateForm();
+  };
+  
+  const handleGuestsChange = (e) => {
+    setNumberOfGuests(parseInt(e.target.value));
+    validateForm();
+  };
+  
+  const handleOccasionChange = (e) => {
+    setSelectedOccasion(e.target.value);
+    validateForm();
+  };
+  
 
   return (
     <div className="booking-form-container">
       
       <form className="booking-form" onSubmit={handleFormSubmit}>
-      <h2>Book Now!</h2><br />
+      <h1>Book Now!</h1><br />
         <label htmlFor="res-date">Choose date</label>
         <input
           type="date"
           id="res-date"
           value={selectedDate}
-          onChange={(e) => setSelectedDate(e.target.value)}
+          onChange={(e) => {
+              setSelectedDate(e.target.value)
+              handleDateChange(e)}
+            }
+          required
         />
 
         <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
           value={selectedTime}
-          onChange={(e) => setSelectedTime(e.target.value)}
+          onChange={(e) => {setSelectedTime(e.target.value)
+              handleTimeChange(e)}}
+          required
         >
           {availableTimes.map((time) => (
             <option key={time} value={time}>
@@ -153,20 +192,29 @@ const BookingForm = () => {
           max="10"
           id="guests"
           value={numberOfGuests}
-          onChange={(e) => setNumberOfGuests(parseInt(e.target.value))}
+          onChange={(e) =>
+            {
+              setNumberOfGuests(parseInt(e.target.value))
+              handleGuestsChange(e)
+            }
+            }
+          required
         />
 
         <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
           value={selectedOccasion}
-          onChange={(e) => setSelectedOccasion(e.target.value)}
+          onChange={(e) => {setSelectedOccasion(e.target.value)
+              handleOccasionChange(e)}}
+              required
+
         >
           <option value="Birthday">Birthday</option>
           <option value="Anniversary">Anniversary</option>
         </select>
 
-        <input type="submit" value="Make Your Reservation" />
+        <input type="submit" value="Make Your Reservation" disabled={!isFormValid} />
       </form>
 
       {bookedTimes.length > 0 && (
