@@ -1,80 +1,90 @@
+/* Desktop navigation styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: #fff; /* Example background color */
-    height:90px;
-    font-family: "Markazi Text",serif;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  height: 90px;
+  font-family: "Markazi Text", serif;
+}
+.menu-icon {
+  display: none;
+}
 
-  }
-  
-  .main-links {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Adjust gap between links */
-  }
-  
-  .main-links li a {
-    text-decoration: none;
-    color: black; /* Example link color */
-  }
-  
-  .logo img {
-    max-height: 50px; /* Example logo height */
-  }
-  
+.main-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
+.main-links li a {
+  text-decoration: none;
+  color: black;
+}
 
+.logo img {
+  max-height: 50px;
+}
+
+/* Mobile navigation styles */
+.menu-icon {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px auto;
+  transition: 0.4s;
+}
+
+/* Hide the checkbox by default */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .menu-icon {
+    display: block;
+  }
+
+  .main-links {
     display: none;
-    cursor: pointer;
-    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+   border:1px solid #ccc;
+    padding: 20px;
   }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px auto;
-    transition: 0.4s;
+
+  .main-links.active {
+    display: flex;
   }
-  
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    .main-links {
-      display: none;
-      flex-direction: column;
-      text-align: center;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      padding: 20px;
-    }
-  
-    .main-links.active {
-      display: flex;
-    }
-  
-    .main-links li {
-      margin: 10px 0;
-    }
-  
-    .menu-toggle:checked + .menu-icon .bar:nth-child(1) {
-      transform: rotate(-45deg) translate(-5px, 6px);
-    }
-  
-    .menu-toggle:checked + .menu-icon .bar:nth-child(2) {
-      opacity: 0;
-    }
-  
-    .menu-toggle:checked + .menu-icon .bar:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
-    }
+
+  .main-links li {
+    margin: 10px 0;
   }
+
+  /* Display the checkbox when needed */
+  .menu-icon:hover + .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle:checked + .menu-icon .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle:checked + .menu-icon .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .menu-icon .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}

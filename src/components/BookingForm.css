@@ -1,44 +1,58 @@
 /* BookingForm.css */
 .booking-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  .booking-form {
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .booking-form label {
-    font-weight: bold;
-  }
-  
-  .booking-form input,
-  .booking-form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 20px;
+  padding: 20px;
+}
+
+.booking-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form label {
+  font-weight: bold;
+}
+
+/* Set the width of all input fields and selects to match */
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form select,
+.booking-form input[type="submit"] {
+  width: 400px;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+.booking-form input[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .booking-form input[type="date"],
+  .booking-form input[type="number"],
+  .booking-form select,
   .booking-form input[type="submit"] {
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    width: 100%;
+    max-width: none; /* Remove max-width for smaller screens */
   }
-  
-  .booking-form input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
+}

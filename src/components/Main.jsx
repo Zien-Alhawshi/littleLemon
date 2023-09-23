@@ -17,9 +17,9 @@ const Main = ()=>{
   
 </div>
   <div className="cards">
-  <Card img={img1} name="Greek Salad" content="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons." />
-  <Card img={img2} name="Bruschetta" content="Our Bruschetta is made from homemade grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh vegetables." />
-  <Card img={img3} name="Lemon Cake" content = "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined." />
+  <Card className="card" img={img1} name="Greek Salad" content="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons." />
+  <Card className="card" img={img2} name="Bruschetta" content="Our Bruschetta is made from homemade grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with fresh vegetables." />
+  <Card className="card" img={img3} name="Lemon Cake" content = "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined." />
 
   {/* <Card />
   <Card /> */}

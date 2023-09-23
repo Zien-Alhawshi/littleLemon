@@ -1,41 +1,79 @@
+/* Desktop styles for the footer (no changes) */
 .footer {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-top: 10px groove #495e57;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-top: 10px groove #495e57;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 10px;
+  color: black;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.navigation-links a,
+.social-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-info li {
+  font-size: 0.9rem;
+}
+
+/* Mobile styles for the footer */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack columns on top of each other for mobile */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within columns */
   }
-  
+
   .footer-column {
-    flex: 1;
     padding: 10px;
     color: black;
   }
-  
-  .logo img {
-    max-height: 50px;
-  }
-  
+
   h2 {
     font-size: 1.2rem;
+    margin-top: 10px; /* Add margin at the top for spacing */
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
   }
-  
+
   ul li {
     margin-bottom: 5px;
   }
-  
+
   .navigation-links a,
   .social-links a {
     text-decoration: none;
     color: black;
   }
-  
+
   .contact-info li {
     font-size: 0.9rem;
   }
-  
+}
